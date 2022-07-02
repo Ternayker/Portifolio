@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+/*Formatação da interface*/
+body{
+	background-color: #333;
+	overflow: hidden;
+}
+
+div.interface{
+	width: 90%;
+	background-color: #e4e4e4;
+	box-shadow: 0px 0px 10px #333;
+	border-radius: 3%;
+	margin: auto;
+	
+	
+}
+
+/*Formatação do cabeçario*/
+header{
+	height: 1px;
+	width: 100%;
+	
+	
+}
+
+/*Formatação do menu*/
+.menu{
+	display: flex;
+	width: 85%;
+	position: fixed;
+	overflow: hidden;
+	margin: 0px 6%;
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 15%;
+}
+
+.logo-img{
+	margin: 10px 20px;
+
+}
+
+ul.edit-menu{
+	width: 100%;
+	display: flex;
+	list-style: none;
+	justify-content:space-around;
+	margin-left:-30px;
+}
+
+
+.menu li a{
+	text-decoration: none;
+	font-family: Arial;
+	font-size: 20px;
+	color: rgb(0,191,191);
+}
+
+.menu li a:hover{
+	text-transform: 0.5s;
+	color: #fff;
+}
+
+.menu li a span{
+	margin-left: 7px;
+}
+
+/*Formatação do conteudo*/
+.corpo{
+	width: 90%;
+	margin: 10px auto;
+}
+
+section.corpo div{
+	padding:70px 40px 100% 40px;
+	margin-bottom:40px;
+	background: rgba(0,191,191,0.5);
+	border-radius: 2%;
+	box-shadow: 0px 0px 10px #333;
+}
+
+section.corpo div#sobre{
+	margin-top:-10px;
+	background: rgba(0,191,191,0.5);
+	border-radius: 2%;
+	box-shadow: 0px 0px 10px #333;
+}
+
+
+section.corpo div#formacao{
+	padding:70px 40px 20% 40px;
+	margin-bottom:40px;
+	background: rgba(0,191,191,0.5);
+	border-radius: 2%;
+	box-shadow: 0px 0px 10px #333;
+}
+
+section.corpo div h1{
+	padding: 10px;
+	margin-top: 20px;
+}
+
+/*formatação do rodape*/
+footer.rodape{
+	width: 100%;
+    border-top: 3px #606060 solid;
+    padding-bottom: 15px;
+
+}
+
+footer.rodape h2{ 
+    margin-left: 5px;
+    font-size: 15px;
+    color: rgb(0,191,191);
+}
+
+footer.rodape img{
+	margin:0px 5px -10px 0px;
+}
+
+footer.rodape p{
+    text-align: center; 
+    margin-top: -40px;
+    color: rgb(0,191,191);
+}
+
+
+/*Formatação caso a tela diminua*/
+@media(max-width: 900px){
+	/*Formatação do menu*/
+	.menu li a span{
+	display: none;
+	}
+	
+	/*Formatação do conteudo*/
+	section.corpo div#formacao{
+	padding:70px 40px 37% 40px;
+	margin-bottom:40px;
+	background: rgba(0,191,191,0.5);
+	border-radius: 2%;
+	box-shadow: 0px 0px 10px #333;
+}
+	
+}
+
