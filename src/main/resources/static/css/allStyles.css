@@ -1,25 +1,30 @@
 @charset "UTF-8";
 
-/*Formatação da interface*/
+				/*Formatação da interface*/
 body{
 	background-image: url(../img/fundo.jpg);
 	background-color:black;
-	overflow: hidden;
+	
 }
 
-/*Formatação do cabeçario*/
+a{
+	text-decoration: none;
+}
+
+				/*Formatação do cabeçario*/
 header{
-	height: 1px;
+	height: 0px;
 }
 
-/*Formatação do menu*/
+
+				/*Formatação do menu*/
 .menu{
 	display: flex;
 	width: 75%;
 	position: fixed;
 	overflow: hidden;
 	margin: 0px 11.5%;
-	background-color: rgba(0,0,0,0.8);
+	background-color: rgba(0,0,0,0.5);
 	border-radius: 15%;
 }
 
@@ -38,7 +43,6 @@ ul.edit-menu{
 
 
 .menu li a{
-	text-decoration: none;
 	font-family: Arial;
 	font-size: 20px;
 	color: #fff ;
@@ -53,14 +57,14 @@ ul.edit-menu{
 	margin-left: 7px;
 }
 
-/*Formatação do conteudo geral*/
+				/*Formatação do conteudo geral*/
 .corpo{
 	width:80%;
 	margin: 10px auto;
 }
 
 section.corpo div{
-	padding:70px 40px 100% 40px;
+	padding:70px 40px 0px 40px;
 	margin-bottom:40px;
 	background: rgb(0,60,60);
 	border-radius: 2%;
@@ -80,51 +84,19 @@ section.corpo div p{
 	margin-top: 50px;
 }
 
-/*Formatação do conteudo inicial*/
-section.corpo div#inicio p{
-	text-align: center;
-}
-
-section.corpo div#inicio h1{
-	margin-top: 10%;
-	font-size: 80px;
-	font-family: Cursive;
-	font-style: italic;
-	font-weight: bold;
-}
-
-section.corpo div#inicio a{
-	text-decoration: none;
-	padding:25px 10px 5px 10px;
-	margin-left: 45%;
-	border-radius: 5%;
-	background-color: #111;
-}
-
-section.corpo div#inicio span{
-	color: #fff;
-	margin:0px 10px 10px 10px;
-}
-
-/*Formatação do conteudo sobre mim*/
-
-section.corpo div#sobre{
-	margin-top : -10 px;
-}
-
-/*Formatação do conteudo conhecimentos*/
-.edit-list-con{
+				/*ul de projetos e conhecimentos*/
+.edit-list-pc{
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap; 
 }
 
-.edit-list-con li{
+.edit-list-pc li{
 	flex-basis: 50%;  
-	margin-bottom: 30px;
+	margin-bottom: 25px;
 }
 
-.edit-list-con li span{
+.edit-list-pc li span{
 	color: #fff;
 	font-size: 25px;
 	padding: 10px;
@@ -132,19 +104,97 @@ section.corpo div#sobre{
 }
 
 
-/*Formatação do conteudo formacao*/
-section.corpo div#formacao{
+				/*Formatação do conteudo inicial*/
+section.corpo div.inicio{
+	padding-bottom:15%;
+}
+
+section.corpo div.inicio p{
+	text-align: center;
+}
+
+section.corpo div.inicio h1{
+	margin-top: 70px;
+	font-size: 80px;
+	font-family: Cursive;
+	font-style: italic;
+	font-weight: bold;
+}
+
+section.corpo div.inicio a{
+	padding:25px 10px 5px 10px;
+	margin-left: 45% ;
+	border-radius: 5%;
+	background-color: rgba(0,0,0,0.8);;
+}
+
+section.corpo div.inicio span{
+	color: #fff;
+	margin: 0px 10px 0px 10px;
+}
+
+
+				/*Formatação do conteudo sobre mim*/
+section.corpo div.sobre{
+	padding:70px 40px 1% 40px;
+	
+}
+
+section.corpo div.sobre .f{
+	padding:inherit;
+	margin-bottom:inherit;
+	background: inherit;
+	border-radius: inherit;
+	margin-top: -10%;
+	display: flex;
+}
+
+
+				/*Formatação do conteudo projetos*/
+section.corpo div.projetos{
+	padding-bottom: 3%;
+}
+
+section.corpo div.projetos li{
+	display: flex;
+}
+
+section.corpo div.projetos img{
+	max-width:200px;
+    max-height:150px;
+    width: auto;
+    height: auto;
+}
+
+section.corpo div.projetos span{
+	font-weight: bold;
+}
+
+section.corpo div.projetos span:hover{
+	text-transform: 0.5s;
+	color: rgb(0,191,191);
+}
+
+
+				/*Formatação do conteudo conhecimentos*/
+section.corpo div.conhecimentos{
+	padding-bottom: 2%;
+}
+
+
+				/*Formatação do conteudo formacao*/
+section.corpo div.formacao{
 	padding:70px 40px 15% 40px;
 	margin-bottom: 40px;
 }
 
 
-section.corpo div#formacao p{
+section.corpo div.formacao p{
 	margin-top: 70px;
 }
 
 
-/*formatação do rodape*/
+				/*formatação do rodape*/
 footer.rodape{
 	width: 100%;
     border-top: 3px #606060 solid;
@@ -170,26 +220,67 @@ footer.rodape p{
 }
 
 
-/*Formatação caso a tela diminua*/
+				/*Formatação caso a tela diminua*/
 @media(max-width: 900px){
-	/*Formatação do menu*/
+	    /*menu*/
 	.menu li a span{
 	display: none;
 	}
 	
-	/*Formatação do conteudo*/
-	section.corpo div#formacao{
-	padding-bottom:1%;
+		/*ul de projetos e conhecimentos*/
+	ul.edit-list-pc li img{
+		display: none;
 	}
 	
-	/*formatação do rodape*/
+	
+	  /*conteudo inicio*/
+	section.corpo div.inicio{
+	padding-bottom: 10%;
+	}
+	
+	section.corpo div.inicio a{
+		margin-left: 40% ;
+	}
+	
+	
+		/*conteudo sobre mim*/
+	section.corpo div.sobre .f img{
+		display: none;
+	}
+	
+	section.corpo div.sobre .f{
+		margin-top: -30%;
+	}
+
+
+		/*conteudo projetos*/
+	section.corpo div.projetos{
+	padding-bottom: 55%;
+	}
+	
+	div.projetos ul.edit-list-pc{
+		margin-top: 15%;
+		flex-wrap: wrap; 
+	}
+
+		/*conteudo conhecimentos*/
+	div.conhecimentos ul.edit-list-pc{
+		display: inline;
+		text-align: center;
+	}
+	
+
+	  /*conteudo formação*/
+	section.corpo div.formacao{
+	padding-bottom: 1%;
+	}
+	
+	
+	    /*rodape*/
 	footer.rodape h2{ 
     margin-left: 5px;
 	}
 	
-	.edit-list-con li img{
-		display: none;
-	}
 	
 }
 
