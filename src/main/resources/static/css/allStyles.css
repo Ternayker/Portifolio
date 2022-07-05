@@ -208,6 +208,10 @@ footer.rodape h2{
     color: rgb(0,191,191);
 }
 
+footer.rodape a{
+	color: rgb(0,191,191);
+}
+
 footer.rodape img{
 	margin:0px 5px -10px 0px;
 }
@@ -220,67 +224,5 @@ footer.rodape p{
 }
 
 
-				/*Formatação caso a tela diminua*/
-@media(max-width: 900px){
-	    /*menu*/
-	.menu li a span{
-	display: none;
-	}
-	
-		/*ul de projetos e conhecimentos*/
-	ul.edit-list-pc li img{
-		display: none;
-	}
-	
-	
-	  /*conteudo inicio*/
-	section.corpo div.inicio{
-	padding-bottom: 10%;
-	}
-	
-	section.corpo div.inicio a{
-		margin-left: 40% ;
-	}
-	
-	
-		/*conteudo sobre mim*/
-	section.corpo div.sobre .f img{
-		display: none;
-	}
-	
-	section.corpo div.sobre .f{
-		margin-top: -30%;
-	}
 
-
-		/*conteudo projetos*/
-	section.corpo div.projetos{
-	padding-bottom: 55%;
-	}
-	
-	div.projetos ul.edit-list-pc{
-		margin-top: 15%;
-		flex-wrap: wrap; 
-	}
-
-		/*conteudo conhecimentos*/
-	div.conhecimentos ul.edit-list-pc{
-		display: inline;
-		text-align: center;
-	}
-	
-
-	  /*conteudo formação*/
-	section.corpo div.formacao{
-	padding-bottom: 1%;
-	}
-	
-	
-	    /*rodape*/
-	footer.rodape h2{ 
-    margin-left: 5px;
-	}
-	
-	
-}
 

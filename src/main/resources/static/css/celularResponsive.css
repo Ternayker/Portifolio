@@ -1,0 +1,40 @@
+@charset "ISO-8859-1";
+
+				/*Formatação para tablet*/
+@media (max-width: 500px) {
+	
+		/*menu*/
+	.menu{
+		display: none;
+	}
+		
+		
+		/*conteudo inicio*/
+	section.corpo div.inicio a{
+		margin-left: 30%;
+	}
+		
+		
+		/*conteudo sobre mim*/
+	section.corpo div.sobre div.f p{
+		font-size: 15px;
+		margin-top: 10px;
+	}
+		
+		
+		/*conteudo conhecimentos*/
+	section.corpo div.conhecimentos h1{
+		font-size: 35px;
+	}
+	
+	
+		/*rodae*/
+	footer.rodape h2{
+		display: none;
+	}
+	
+	footer.rodape p{
+		margin-top:10px;
+	}
+}
+
