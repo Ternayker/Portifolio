@@ -100,7 +100,6 @@ section.corpo div p{
 	color: #fff;
 	font-size: 25px;
 	padding: 10px;
-	
 }
 
 
@@ -123,9 +122,17 @@ section.corpo div.inicio h1{
 
 section.corpo div.inicio a{
 	padding:25px 10px 5px 10px;
-	margin-left: 45% ;
+	margin-left: 23%;
 	border-radius: 5%;
-	background-color: rgba(0,0,0,0.8);;
+	border-style:outset;
+	border-color: #fff;
+	background-color: rgb(0,50,50);
+	
+}
+
+section.corpo div.inicio a:hover{
+	text-transform: 0.5s;
+	background-color: rgba(0,0,0,0.8);
 }
 
 section.corpo div.inicio span{
@@ -164,15 +171,21 @@ section.corpo div.projetos img{
     max-height:150px;
     width: auto;
     height: auto;
+    border-radius: 5%;
 }
 
 section.corpo div.projetos span{
+	margin-left: 10px;
 	font-weight: bold;
+	border-radius: 5%;
+	border-style:outset;
+	border-color: #fff;
+	background-color: rgb(0,50,50);
 }
 
 section.corpo div.projetos span:hover{
 	text-transform: 0.5s;
-	color: rgb(0,191,191);
+	background-color: rgba(0,0,0,0.8);
 }
 
 
