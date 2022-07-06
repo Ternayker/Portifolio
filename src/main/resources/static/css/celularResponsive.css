@@ -10,9 +10,14 @@
 		
 		
 		/*conteudo inicio*/
+	section.corpo div.inicio img{
+		display: none;
+	}
+		
 	section.corpo div.inicio a{
-		padding:25px 2px 2px 2px;
-		margin-left: 2px;
+		padding:5px;
+		margin-left: 10px;
+		margin-right: 3px;
 	}
 		
 		
@@ -21,11 +26,31 @@
 		font-size: 15px;
 		margin-top: 10px;
 	}
-		
+	
+	section.corpo div.sobre h1{
+		font-size: 30px;
+	}
+	
+	
+		/*conteudo projetos*/
+	section.corpo div.projetos span{
+		font-size: 15px;
+	}
+	
+	section.corpo div.projetos h1{
+		font-size: 30px;
+	}
+	
 		
 		/*conteudo conhecimentos*/
 	section.corpo div.conhecimentos h1{
-		font-size: 35px;
+		font-size: 30px;
+	}
+	
+		
+		/*conteudo  formação*/
+	section.corpo div.formacao h1{
+		font-size: 30px;
 	}
 	
 	
@@ -38,4 +63,3 @@
 		margin-top:10px;
 	}
 }
-

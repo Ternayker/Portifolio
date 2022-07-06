@@ -40,7 +40,15 @@
 	
 	div.projetos ul.edit-list-pc{
 		margin-top: 15%;
-		flex-wrap: wrap; 
+		display: inherit;
+	}
+	
+	div.projetos ul.edit-list-pc li{
+	    margin-bottom: 30px;
+	}
+	
+	div.projetos ul.edit-list-pc span{
+	    font-size: 15px;
 	}
 
 		/*conteudo conhecimentos*/
