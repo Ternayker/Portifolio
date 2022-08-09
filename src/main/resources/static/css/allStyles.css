@@ -5,12 +5,12 @@
 	--background-color1: #000;
 	--background-color2: #111;
 	--text-color: #FFF;
+	--menu-color: rgba(0,0,0,.8);
 }
 
 body{
-	/*background-image: url(../img/fundo.jpg);*/
-
-	background-color:blue;
+	background-color:var(--background-color1);
+	transition: .5s;
 }
 
 #darkmode{
@@ -21,21 +21,28 @@ body{
 	--background-color1: #FFF;
 	--background-color2: #EEE;
 	--text-color: #000;
+	--menu-color: rgba(200,200,200,.8);
+	transition: 1s;
 }
 
-#darkmode:checked + footer{
-	--background-color1: #FFF;
-	--background-color2: #EEE;
-	--text-color: #000;
-}
 
 .darkmodelabel{
+	position:fixed;
+	margin-left: 30px;
+	margin-top: 34em;
 	cursor: pointer;
 	color: var(--text-color);
+	padding: 9px;
+	border: solid 1.5px var(--text-color);
+	background:  var(--background-color1);
+	border-radius: 10px;
 }
 
-.darkmodelabel:after{
-	content: " off";
+.round{
+	padding: 0px 8px 0px 8px;
+	margin-top: 2px;
+	background-color: var(--text-color);
+	border-radius: 50%;
 }
 
 main{
@@ -61,13 +68,13 @@ header{
 	position: fixed;
 	margin: -5px -10px;
 	overflow: hidden;
-	background-color: rgba(0,0,0,.5);
+	background-color: var(--menu-color);
 	border-radius: 5px;
 }
 
 .logo-img{
+	position:relative;
 	margin: 10px 20px;
-
 }
 
 ul.edit-menu{
@@ -80,6 +87,7 @@ ul.edit-menu{
 
 
 .menu li a{
+	position:relative;
 	font-family: Arial;
 	font-size: 20px;
 	color: var(--text-color) ;
@@ -87,7 +95,7 @@ ul.edit-menu{
 
 .menu li a:hover{
 	text-transform: 0.5s;
-	color: #0000FF;
+	color: #8F8F8F;
 }
 
 .menu li a span{
@@ -123,67 +131,21 @@ section.corpo div p{
 
 				/*ul de projetos e conhecimentos*/
 .edit-list-pc{
+	width: 80%;
+	margin: auto;
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap; 
 }
 
 .edit-list-pc li{
-	flex-basis: 50%;  
+	flex-basis: 33%;  
 	margin-bottom: 25px;
 }
 
-.edit-list-pc li span{
-	color: var(--text-color);;
+.edit-list-pc li h3{
+	color: var(--text-color);
 	font-size: 25px;
-	padding: 10px;
-}
-
-.card-flip{
-    width: 50px;
-    height: 50px;
-    background-color: transparent;
-    perspective: 1000;
-    box-shadow: none;
-    margin-bottom: 20px;
-}
-
-.card-flip-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform .6s;
-    transform-style: preserve-3d;
-    box-shadow: none;
-}
-
-.card-flip:hover .card-flip-inner{
-    transform: rotateY(180deg);
-}
-
-.card-flip-front, .card-flip-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    border-radius: 16px;
-    box-shadow: none;
-}
-
-.card-flip-front{
-    background-image: linear-gradient(45deg, #6F04D9, #D9040E);
-    box-shadow: none;
-}
-
-
-
-.card-flip-back{
-    background: linear-gradient(#6F04D9, #D9040E);
-    color: #fff;
-    transform: rotateY(180deg);
-    box-shadow: none;
 }
 
 
@@ -279,6 +241,38 @@ section.corpo div.conhecimentos{
 	padding-bottom: 2%;
 }
 
+.card{
+	width: 80px;
+	height: 80px;
+}
+
+.card h3{
+	width: 10%;
+	margin-top: -1.5em;
+	text-align: center;
+	
+}
+
+.card-img{
+	position:relative;
+	width: 80px;
+	height: 80px;
+	margin-top: -140px;
+	margin-left: -40px;
+	
+}
+
+.card-img img{
+	margin:-20px 10px;
+}
+
+.card-img:hover{
+	display: none;
+}
+
+.grande{
+	margin-left: -25px;
+}
 
 				/*Formatação do conteudo formacao*/
 section.corpo div.formacao{
