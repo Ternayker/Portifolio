@@ -1,10 +1,47 @@
 @charset "UTF-8";
 
 				/*Formatação da interface*/
+:root{
+	--background-color1: #000;
+	--background-color2: #111;
+	--text-color: #FFF;
+}
+
 body{
-	background-image: url(../img/fundo.jpg);
-	background-color:black;
-	
+	/*background-image: url(../img/fundo.jpg);*/
+
+	background-color:blue;
+}
+
+#darkmode{
+	display: none;
+}
+
+#darkmode:checked + main{
+	--background-color1: #FFF;
+	--background-color2: #EEE;
+	--text-color: #000;
+}
+
+#darkmode:checked + footer{
+	--background-color1: #FFF;
+	--background-color2: #EEE;
+	--text-color: #000;
+}
+
+.darkmodelabel{
+	cursor: pointer;
+	color: var(--text-color);
+}
+
+.darkmodelabel:after{
+	content: " off";
+}
+
+main{
+	position: relative;
+	margin: -10px -8px;
+	background-color:var(--background-color1);
 }
 
 a{
@@ -20,12 +57,12 @@ header{
 				/*Formatação do menu*/
 .menu{
 	display: flex;
-	width: 75%;
+	width: 100%;
 	position: fixed;
+	margin: -5px -10px;
 	overflow: hidden;
-	margin: 0px 11.5%;
-	background-color: rgba(0,0,0,0.5);
-	border-radius: 15%;
+	background-color: rgba(0,0,0,.5);
+	border-radius: 5px;
 }
 
 .logo-img{
@@ -45,12 +82,12 @@ ul.edit-menu{
 .menu li a{
 	font-family: Arial;
 	font-size: 20px;
-	color: #fff ;
+	color: var(--text-color) ;
 }
 
 .menu li a:hover{
 	text-transform: 0.5s;
-	color: rgb(0,191,191);
+	color: #0000FF;
 }
 
 .menu li a span{
@@ -66,20 +103,20 @@ ul.edit-menu{
 section.corpo div{
 	padding:70px 40px 0px 40px;
 	margin-bottom:40px;
-	background: rgb(0,60,60);
-	border-radius: 2%;
+	background: var(--background-color2);
+	box-shadow: 0 0 10px var(--text-color);
+	border-radius: 10px;
 }
 
 section.corpo div h1{	
 	text-align: center;
 	font-size: 50px;
-	text-shadow: 5px 5px 5px black;
 	margin-top: 20px;
-	color: #fff;
+	color: var(--text-color);
 }
 
 section.corpo div p{	
-	color: #fff;
+	color: var(--text-color);
 	font-size: 25px;
 	margin-top: 50px;
 }
@@ -97,9 +134,56 @@ section.corpo div p{
 }
 
 .edit-list-pc li span{
-	color: #fff;
+	color: var(--text-color);;
 	font-size: 25px;
 	padding: 10px;
+}
+
+.card-flip{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    perspective: 1000;
+    box-shadow: none;
+    margin-bottom: 20px;
+}
+
+.card-flip-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform .6s;
+    transform-style: preserve-3d;
+    box-shadow: none;
+}
+
+.card-flip:hover .card-flip-inner{
+    transform: rotateY(180deg);
+}
+
+.card-flip-front, .card-flip-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 16px;
+    box-shadow: none;
+}
+
+.card-flip-front{
+    background-image: linear-gradient(45deg, #6F04D9, #D9040E);
+    box-shadow: none;
+}
+
+
+
+.card-flip-back{
+    background: linear-gradient(#6F04D9, #D9040E);
+    color: #fff;
+    transform: rotateY(180deg);
+    box-shadow: none;
 }
 
 
@@ -125,7 +209,7 @@ section.corpo div.inicio a{
 	margin-left: 23%;
 	border-radius: 5%;
 	border-style:outset;
-	border-color: #fff;
+	border-color: var(--text-color);
 	background-color: rgb(0,50,50);
 	
 }
@@ -136,7 +220,7 @@ section.corpo div.inicio a:hover{
 }
 
 section.corpo div.inicio span{
-	color: #fff;
+	color: var(--text-color);
 	margin: 0px 10px 0px 10px;
 }
 
@@ -152,6 +236,7 @@ section.corpo div.sobre .f{
 	margin-bottom:inherit;
 	background: inherit;
 	border-radius: inherit;
+	box-shadow: none;
 	margin-top: -10%;
 	display: flex;
 }
@@ -179,7 +264,7 @@ section.corpo div.projetos span{
 	font-weight: bold;
 	border-radius: 5%;
 	border-style:outset;
-	border-color: #fff;
+	border-color: var(--text-color);
 	background-color: rgb(0,50,50);
 }
 
@@ -210,7 +295,8 @@ section.corpo div.formacao p{
 				/*formatação do rodape*/
 footer.rodape{
 	width: 100%;
-    border-top: 3px #606060 solid;
+	background: var(--background-color1);
+	border-top: 3px #606060 solid;
     padding-bottom: 15px;
 
 }
@@ -218,11 +304,11 @@ footer.rodape{
 footer.rodape h2{ 
     margin-left: 10%;
     font-size: 15px;
-    color: rgb(0,191,191);
+    color: var(--text-color);
 }
 
 footer.rodape a{
-	color: rgb(0,191,191);
+	color: var(--text-color);
 }
 
 footer.rodape img{
@@ -233,7 +319,7 @@ footer.rodape p{
     text-align: center; 
     font-size: 20px;
     margin-top: -40px;
-    color: rgb(0,191,191);
+    color: var(--text-color);
 }
 
 
