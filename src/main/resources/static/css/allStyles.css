@@ -146,12 +146,6 @@ p{
 	margin-bottom: 25px;
 }
 
-.edit-list-pc li h3{
-	color: var(--text-color);
-	font-size: 25px;
-}
-
-
 				/*Formatação do conteudo inicial*/
 .inicio{
 	padding-bottom:15%;
@@ -169,27 +163,6 @@ p{
 	font-weight: bold;
 }
 
-.inicio h1::before{
-	content: 'José Silvano';
-	color: var(--background-color2);
-	position: absolute;
-	border-right: .4rem solid var(--text-color);
-	animation: slide 10s linear infinite;
-	white-space: nowrap;
-	overflow: hidden;
-}
-
-@keyframes slide{
-	0%{
-		width: 0%;
-	}	
-	50%{
-		width: 48%;
-	}
-	100%{
-		width: 0%;
-	}
-}
 
 
 .btn{
@@ -221,7 +194,7 @@ p{
 }
 
 .btn:hover:before{
-    background-color: rgba(158,85,255,.3);
+    background: transparent;
     transform: translate(-33px, -13px);
 }
 
@@ -305,6 +278,8 @@ p{
 
 .card h3{
 	width: 10%;
+	color: var(--text-color);
+	font-size: 25px;
 	margin-top: -1.5em;
 	text-align: center;
 	

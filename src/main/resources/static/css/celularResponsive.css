@@ -1,7 +1,26 @@
 @charset "ISO-8859-1";
 
 				/*Formatação para tablet*/
-@media (max-width: 500px) {
+@media (max-width: 700px) {
+	.darkmodelabel{
+		margin-left: 10px;
+	}
+	
+	.btn{
+		margin-left: 5%;
+	}
+}
+@media (max-width: 550px) {
+	.darkmodelabel{
+		margin-left: 5px;
+	}
+	
+	.btn{
+		margin-left: 0px;
+	}
+}
+
+@media (max-width: 510px) {
 	
 		/*menu*/
 	.menu{
@@ -10,56 +29,88 @@
 		
 		
 		/*conteudo inicio*/
-	section.corpo div.inicio img{
+	.inicio img{
 		display: none;
 	}
 		
-	section.corpo div.inicio a{
+	.btn{
 		padding:5px;
-		margin-left: 10px;
+		margin-left: 20px;
 		margin-right: 3px;
+	}
+	
+	.btn::before{
+		width: 109px;
+   		height: 30px;
+   		margin: 11px 26px;
 	}
 		
 		
 		/*conteudo sobre mim*/
-	section.corpo div.sobre div.f p{
+	.f p{
 		font-size: 15px;
 		margin-top: 10px;
 	}
 	
-	section.corpo div.sobre h1{
+	.sobre h1{
 		font-size: 30px;
 	}
 	
 	
 		/*conteudo projetos*/
-	section.corpo div.projetos span{
+	.projetos span{
 		font-size: 15px;
 	}
 	
-	section.corpo div.projetos h1{
+	.projetos .edit-list-pc li{
+		margin-left: -11px;
+	}
+	
+	.projetos h1{
 		font-size: 30px;
 	}
 	
 		
 		/*conteudo conhecimentos*/
-	section.corpo div.conhecimentos h1{
+	.conhecimentos h1{
 		font-size: 30px;
 	}
 	
+	.card{
+	width: 20px;
+	height: 20px;
+	}
+	
+	.card-img{
+	position:relative;
+	width: 20px;
+	height: 20px;
+	margin-top: -90px;
+	margin-left: -40px;
+	}
+	
+	.card-img img{
+	position: absolute;
+	margin: -3.5em -1.8em;
+	}
+
+	.card h3{
+	margin-top: -3em;
+	font-size: 15px;
+	}
 		
 		/*conteudo  formação*/
-	section.corpo div.formacao h1{
+	.formacao h1{
 		font-size: 30px;
 	}
 	
 	
 		/*rodae*/
-	footer.rodape h2{
+	.rodape h2{
 		display: none;
 	}
 	
-	footer.rodape p{
+	.rodape p{
 		margin-top:10px;
 	}
 }

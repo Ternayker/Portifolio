@@ -1,71 +1,105 @@
 @charset "ISO-8859-1";
 
 				/*Formatação para tablet*/
+@media(max-width: 1200px){
+	.corpo .sobre .f img{
+		display: none;
+	}
+}
 @media(max-width: 900px){
+	
+	.darkmodelabel{
+		margin-left: 15px;
+	}
+	
 	    /*menu*/
 	.menu li a span{
 	display: none;
 	}
 	
 		/*ul de projetos e conhecimentos*/
-	ul.edit-list-pc li img{
-		display: none;
+	.edit-list-pc li{
+		flex-basis: inherit;
 	}
 	
-	
 	  /*conteudo inicio*/
-	section.corpo div.inicio{
+	.inicio{
 	padding-bottom: 10%;
 	}
 	
-	section.corpo div.inicio a{
+	.btn{
 		margin-left: 13% ;
 	}
 	
 	
 		/*conteudo sobre mim*/
-	section.corpo div.sobre .f img{
+	.f img{
 		display: none;
 	}
 	
-	section.corpo div.sobre .f{
+	.f{
 		margin-top: -30%;
 	}
 
 
 		/*conteudo projetos*/
-	section.corpo div.projetos{
-	padding-bottom: 55%;
+	.projetos{
+	padding-bottom: 0%;
 	}
 	
-	div.projetos ul.edit-list-pc{
+	.projetos .edit-list-pc{
 		margin-top: 15%;
-		display: inherit;
+		justify-content: space-between;
 	}
 	
-	div.projetos ul.edit-list-pc li{
+	.projetos .edit-list-pc li{
+		margin-left: 0px;
+		margin-bottom: 40px;
 	    margin-bottom: 30px;
 	}
 	
-	div.projetos ul.edit-list-pc span{
+	.projetos .edit-list-pc span{
 	    font-size: 15px;
 	}
 
 		/*conteudo conhecimentos*/
-	div.conhecimentos ul.edit-list-pc{
-		display: inline;
+	.conhecimentos .edit-list-pc{
 		text-align: center;
+		justify-content: space-between;
+	}
+	
+	.card{
+	width: 50px;
+	height: 50px;
+	}
+	
+	.card-img{
+	position:relative;
+	width: 50px;
+	height: 50px;
+	margin-top: -120px;
+	margin-left: -40px;
+	}
+	
+	.card-img img{
+	position: absolute;
+	margin: -2.5em -1.8em;
+	}
+
+	.card h3{
+	margin-top: -2em;
+	font-size: 20px;
 	}
 	
 
 	  /*conteudo formação*/
-	section.corpo div.formacao{
+	.corpo .formacao{
 	padding-bottom: 1%;
 	}
 	
 	
 	    /*rodape*/
-	footer.rodape h2{ 
+	.rodape h2{ 
     margin-left: 5px;
 	}
 	
