@@ -6,6 +6,7 @@
 	--background-color2: #111;
 	--text-color: #FFF;
 	--menu-color: rgba(0,0,0,.8);
+	--button-color: rgba(255,255,255,.3);
 }
 
 body{
@@ -22,6 +23,7 @@ body{
 	--background-color2: #EEE;
 	--text-color: #000;
 	--menu-color: rgba(200,200,200,.8);
+	--button-color: rgba(0,0,0,.3);
 	transition: 1s;
 }
 
@@ -108,7 +110,7 @@ ul.edit-menu{
 	margin: 10px auto;
 }
 
-section.corpo div{
+div{
 	padding:70px 40px 0px 40px;
 	margin-bottom:40px;
 	background: var(--background-color2);
@@ -116,14 +118,15 @@ section.corpo div{
 	border-radius: 10px;
 }
 
-section.corpo div h1{	
+h1{	
+	position: relative;
 	text-align: center;
 	font-size: 50px;
 	margin-top: 20px;
 	color: var(--text-color);
 }
 
-section.corpo div p{	
+p{	
 	color: var(--text-color);
 	font-size: 25px;
 	margin-top: 50px;
@@ -150,15 +153,15 @@ section.corpo div p{
 
 
 				/*Formatação do conteudo inicial*/
-section.corpo div.inicio{
+.inicio{
 	padding-bottom:15%;
 }
 
-section.corpo div.inicio p{
+.inicio p{
 	text-align: center;
 }
 
-section.corpo div.inicio h1{
+.inicio h1{
 	margin-top: 70px;
 	font-size: 80px;
 	font-family: Cursive;
@@ -166,34 +169,76 @@ section.corpo div.inicio h1{
 	font-weight: bold;
 }
 
-section.corpo div.inicio a{
+.inicio h1::before{
+	content: 'José Silvano';
+	color: var(--background-color2);
+	position: absolute;
+	border-right: .4rem solid var(--text-color);
+	animation: slide 10s linear infinite;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@keyframes slide{
+	0%{
+		width: 0%;
+	}	
+	50%{
+		width: 48%;
+	}
+	100%{
+		width: 0%;
+	}
+}
+
+
+.btn{
 	padding:25px 10px 5px 10px;
 	margin-left: 23%;
-	border-radius: 5%;
-	border-style:outset;
+	border: 1px solid;
+    border-radius: 32px;
 	border-color: var(--text-color);
-	background-color: rgb(0,50,50);
+	background-color: transparent;
+	transition: 0.4s;
 	
 }
 
-section.corpo div.inicio a:hover{
+.btn:hover{
 	text-transform: 0.5s;
 	background-color: rgba(0,0,0,0.8);
 }
 
-section.corpo div.inicio span{
+.btn::before{
+	position: absolute;
+    content: "";
+    width: 152px;
+    height: 48px;
+    margin: 8px 22px;
+    border-radius: 48px;
+    background-color: var(--button-color);
+    transform: translate(-24px, -8px);
+    transition: 0.4s;
+}
+
+.btn:hover:before{
+    background-color: rgba(158,85,255,.3);
+    transform: translate(-33px, -13px);
+}
+
+.inicio span{
 	color: var(--text-color);
-	margin: 0px 10px 0px 10px;
+	font-size: 20px;
+	margin: 0 10px 0 10px;
 }
 
 
 				/*Formatação do conteudo sobre mim*/
-section.corpo div.sobre{
+.sobre{
 	padding:70px 40px 1% 40px;
 	
 }
 
-section.corpo div.sobre .f{
+.f{
 	padding:inherit;
 	margin-bottom:inherit;
 	background: inherit;
@@ -205,15 +250,17 @@ section.corpo div.sobre .f{
 
 
 				/*Formatação do conteudo projetos*/
-section.corpo div.projetos{
+.projetos{
 	padding-bottom: 3%;
 }
 
-section.corpo div.projetos li{
+.projetos li{
 	display: flex;
+	margin-left: 80px;
+	margin-bottom: 40px;
 }
 
-section.corpo div.projetos img{
+.projetos img{
 	max-width:200px;
     max-height:150px;
     width: auto;
@@ -221,23 +268,33 @@ section.corpo div.projetos img{
     border-radius: 5%;
 }
 
-section.corpo div.projetos span{
-	margin-left: 10px;
-	font-weight: bold;
-	border-radius: 5%;
-	border-style:outset;
-	border-color: var(--text-color);
-	background-color: rgb(0,50,50);
+.projetos a{
+	
+	display: relative;
+	margin-top: 40px;
+	margin-left: 30px;
 }
 
-section.corpo div.projetos span:hover{
+.projetos span{
+	padding: 10px;
+	font-weight: bold;
+	border-radius: 5%;
+	white-space: nowrap;
+	color: var(--text-color);
+	border: 1px solid var(--text-color);
+    border-radius: 32px;
+	background-color: var(--background-color2);
+}
+
+.projetos span:hover{
 	text-transform: 0.5s;
-	background-color: rgba(0,0,0,0.8);
+	color: var(--background-color1);
+	background-color: var(--text-color);
 }
 
 
 				/*Formatação do conteudo conhecimentos*/
-section.corpo div.conhecimentos{
+.conhecimentos{
 	padding-bottom: 2%;
 }
 
@@ -275,19 +332,19 @@ section.corpo div.conhecimentos{
 }
 
 				/*Formatação do conteudo formacao*/
-section.corpo div.formacao{
+.formacao{
 	padding:70px 40px 15% 40px;
 	margin-bottom: 40px;
 }
 
 
-section.corpo div.formacao p{
+.formacao p{
 	margin-top: 70px;
 }
 
 
 				/*formatação do rodape*/
-footer.rodape{
+.rodape{
 	width: 100%;
 	background: var(--background-color1);
 	border-top: 3px #606060 solid;
@@ -295,21 +352,21 @@ footer.rodape{
 
 }
 
-footer.rodape h2{ 
+.rodape h2{ 
     margin-left: 10%;
     font-size: 15px;
     color: var(--text-color);
 }
 
-footer.rodape a{
+.rodape a{
 	color: var(--text-color);
 }
 
-footer.rodape img{
+.rodape img{
 	margin:0px 5px -10px 0px;
 }
 
-footer.rodape p{
+.rodape p{
     text-align: center; 
     font-size: 20px;
     margin-top: -40px;
