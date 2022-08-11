@@ -3,12 +3,66 @@
 				/*Formatação para tablet*/
 @media (max-width: 700px) {
 	.darkmodelabel{
-		margin-left: 10px;
+		margin-left: 7px;
 	}
 	
 	.btn{
-		margin-left: 5%;
+		margin-left: 3%;
 	}
+	
+	.conhecimentos h1{
+		font-size: 30px;
+	}
+	
+	.card{
+		width: 20px;
+		height: 20px;
+	}
+	
+	.card-img{
+		position:relative;
+		width: 20px;
+		height: 20px;
+		margin-top: -47px;
+		margin-left: 10px;
+		transform: translate(-50%, -50%);
+	    animation: morph-effect 7s infinite ease-in-out;
+	}
+	
+	.card-img img{
+		position: absolute;
+		margin: -3.5em -1.8em;
+	}
+	
+	.card-img:hover{
+		display: inherit;
+	}
+
+	.card h3{
+		position: relative;
+		margin-top: -3em;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	
+	.card-img:nth-child(1){   
+    	animation-delay: -7s;
+	}
+	
+	.card-img:nth-child(2){   
+	    animation-delay: -7s;
+	}
+	
+	@keyframes morph-effect{
+    0% ,20%, 100%{
+        filter: blur(0px);
+        opacity: 1;
+    }
+    40% ,80%{
+        filter: blur(16px);
+        opacity: 0;
+    }
+}
 }
 @media (max-width: 550px) {
 	.darkmodelabel{
@@ -21,7 +75,10 @@
 }
 
 @media (max-width: 510px) {
-	
+	.darkmodelabel{
+		margin-left: 2px;
+	}
+
 		/*menu*/
 	.menu{
 		display: none;
@@ -29,14 +86,22 @@
 		
 		
 		/*conteudo inicio*/
+	.inicio p{
+		margin-top: -20px;
+	}
+	
+	.inicio h1{
+		
+		margin-bottom: 70px;
+	}
+	
 	.inicio img{
 		display: none;
 	}
 		
 	.btn{
 		padding:5px;
-		margin-left: 20px;
-		margin-right: 3px;
+		margin: 70px 10px 0 3px;
 	}
 	
 	.btn::before{
@@ -63,7 +128,7 @@
 	}
 	
 	.projetos .edit-list-pc li{
-		margin-left: -11px;
+		margin-left: -31px;
 	}
 	
 	.projetos h1{
@@ -76,28 +141,8 @@
 		font-size: 30px;
 	}
 	
-	.card{
-	width: 20px;
-	height: 20px;
-	}
-	
-	.card-img{
-	position:relative;
-	width: 20px;
-	height: 20px;
-	margin-top: -90px;
-	margin-left: -40px;
-	}
-	
-	.card-img img{
-	position: absolute;
-	margin: -3.5em -1.8em;
-	}
 
-	.card h3{
-	margin-top: -3em;
-	font-size: 15px;
-	}
+	
 		
 		/*conteudo  formação*/
 	.formacao h1{

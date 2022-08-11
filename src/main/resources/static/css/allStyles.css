@@ -97,7 +97,7 @@ ul.edit-menu{
 
 .menu li a:hover{
 	text-transform: 0.5s;
-	color: #8F8F8F;
+	color: #9400D3;
 }
 
 .menu li a span{
@@ -178,7 +178,7 @@ p{
 
 .btn:hover{
 	text-transform: 0.5s;
-	background-color: rgba(0,0,0,0.8);
+	background-color: var(--background-color1);
 }
 
 .btn::before{
