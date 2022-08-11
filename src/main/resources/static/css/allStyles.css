@@ -7,11 +7,11 @@
 	--text-color: #FFF;
 	--menu-color: rgba(0,0,0,.8);
 	--button-color: rgba(255,255,255,.3);
+	--icone: url(../img/lua.png) no-repeat;
 }
 
 body{
 	background-color:var(--background-color1);
-	transition: .5s;
 }
 
 #darkmode{
@@ -24,6 +24,7 @@ body{
 	--text-color: #000;
 	--menu-color: rgba(200,200,200,.8);
 	--button-color: rgba(0,0,0,.3);
+	--icone: url(../img/sol.png) no-repeat;
 	transition: 1s;
 }
 
@@ -41,10 +42,10 @@ body{
 }
 
 .round{
-	padding: 0px 8px 0px 8px;
-	margin-top: 2px;
-	background-color: var(--text-color);
-	border-radius: 50%;
+	position: relative;
+	padding: 3px 10px;
+	margin-left: -2px;
+	background: var(--icone);
 }
 
 main{
