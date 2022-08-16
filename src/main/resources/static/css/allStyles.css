@@ -243,14 +243,15 @@ p{
 }
 
 .projetos a{
-	
-	display: relative;
+	display: flex;
+	align-items:flex-start;
 	margin-top: 40px;
 	margin-left: 30px;
 }
 
 .projetos span{
 	padding: 10px;
+	margin-left: 10px;
 	font-weight: bold;
 	border-radius: 5%;
 	white-space: nowrap;
