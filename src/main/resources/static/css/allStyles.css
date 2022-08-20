@@ -11,8 +11,23 @@
 }
 
 body{
-	background-color:var(--background-color1);
+	background-color: transparent;
 }
+
+body::-webkit-scrollbar{
+    width: 16px;
+}
+
+body::-webkit-scrollbar-track{
+    background:  var(--menu-color);
+    
+}
+
+body::-webkit-scrollbar-thumb{
+    background:  #9400D3;
+    border-radius: 16px;
+}
+
 
 #darkmode{
 	display: none;
